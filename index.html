@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form method="post" action="./controller/buy_controller.php">
+      <h2>Cliente</h2>
+
+      <label for="f_name">Nome Completo</label> <br />
+      <input type="text" name="f_name" id="f_name" /> <br /><br />
+
+      <label for="f_address">Endereço completo</label><br />
+      <input type="text" name="f_address" id="f_address" /> <br /><br />
+
+      <label for="f_pnumber">Numero de telefone</label><br />
+      <input type="tel" name="f_pnumber" id="f_pnumber" /> <br /><br />
+
+      <h2>Produto</h2>
+
+      <select name="f_product">
+        <option selected>Selecione o produto!</option>
+        <option value="Arroz 1kg">Arroz 1kg R$7,50</option>
+        <option value="Feijão 1kg">Feijão 1kg R$5,00</option>
+        <option value="Papel-higiênico Pacote c/ 20un">
+          Papel-higiênico Pacote c/ 20un R$12,30
+        </option>
+      </select>
+      <br /><br />
+
+      <label for="f_amount">Quantidade a levar</label><br />
+      <input
+        type="number"
+        name="f_amount"
+        id="f_amount"
+        placeholder="Digite apenas o número"
+      />
+      <br /><br />
+
+      <select name="f_payForm">
+        <option selected>Forma de pagamento</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Débito">Cartão (Débito)</option>
+        <option value="Crédito">Cartão (Crédito)</option>
+      </select>
+      <br /><br />
+
+      <p>Você precisa de entrega?</p>
+      <input type="radio" id="s" name="f_delivery" value="s" />
+      <label for="s">Sim</label><br />
+      <input type="radio" id="n" name="f_delivery" value="n" />
+      <label for="n">Não</label><br />
+      <br /><br />
+
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Limpar seleção" />
+    </form>
+  </body>
+</html>
